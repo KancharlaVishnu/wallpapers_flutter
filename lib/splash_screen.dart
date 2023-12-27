@@ -14,14 +14,18 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 2), () {
-    Get.toNamed(RouteManager.albumsscreen);
-             },);
+    Timer(
+      const Duration(seconds: 2),
+      () {
+        Get.toNamed(RouteManager.albumsscreen);
+      },
+    );
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black87,
       body: Container(
         width: double.infinity,
@@ -29,10 +33,11 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              'W',
-              style: TextStyle(color: Colors.white, fontSize: 80),
-            ),
+            Icon(
+              Icons.adb,
+              size: 300,
+              color: Colors.green,
+            )
           ],
         ),
       ),

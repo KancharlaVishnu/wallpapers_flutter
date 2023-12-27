@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
      getPages: [
       GetPage(name: RouteManager.splashscreen, page: () => SplashScreen()),
        GetPage(name: RouteManager.albumsscreen, page:() => AlbumsScreen()),
-       GetPage(name: RouteManager.photosscreen, page: () =>PhotosScreen()),
+       GetPage(name: RouteManager.photosscreen, page:() => PhotosScreen()),
        GetPage(name: RouteManager.individualphotoscreen, page: () =>IndividualPhotoScreen()),
 
      ],
