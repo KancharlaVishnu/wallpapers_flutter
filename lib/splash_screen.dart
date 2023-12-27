@@ -34,9 +34,9 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Icon(
-              Icons.adb,
+              Icons.add_a_photo,
               size: 300,
-              color: Colors.green,
+              color: Colors.blue,
             )
           ],
         ),

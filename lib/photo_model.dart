@@ -12,9 +12,9 @@ class PhotoModel {
     return PhotoModel(
       json['albumId'] as int,
       json['id'] as int,
-      json['title'] as String ,
-      json['url'] as String ,
-      json['thumbnailUrl'] as String ,
+      json['title'] as String,
+      json['url'] as String,
+      json['thumbnailUrl'] as String,
     );
   }
 }

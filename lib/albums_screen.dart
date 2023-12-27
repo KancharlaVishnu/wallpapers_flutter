@@ -10,7 +10,6 @@ class AlbumsScreen extends StatefulWidget {
   const AlbumsScreen({Key? key}) : super(key: key);
 
   @override
-
   State<AlbumsScreen> createState() => _AlbumsScreenState();
 }
 
@@ -48,20 +47,23 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-
       body: ListView.builder(
         itemCount: albumList.length,
         itemBuilder: (context, index) {
           AlbumModel album = albumList[index];
           return GestureDetector(
-            onTap: (){
-              Get.toNamed(
-                RouteManager.photosscreen,arguments:  album.id
-              );
+            onTap: () {
+              Get.toNamed(RouteManager.photosscreen, arguments: album.id);
             },
             child: ListTile(
-              title:Text(album.id.toString(),style:TextStyle(color:Colors.white60),),
-              subtitle: Text(album.title,style: TextStyle(color: Colors.white),),
+              title: Text(
+                album.id.toString(),
+                style: TextStyle(color: Colors.white60),
+              ),
+              subtitle: Text(
+                album.title,
+                style: TextStyle(color: Colors.white),
+              ),
               // Add more details or customization as needed
             ),
           );

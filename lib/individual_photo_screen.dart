@@ -8,14 +8,14 @@ class IndividualPhotoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     String photourl = Get.arguments as String;
     return Scaffold(
-    backgroundColor: Colors.black,
-      body:
-      Container(
-         child:Image.network(photourl,
-       fit:BoxFit.cover,
-        width: double.infinity,
-        height: double.infinity,
-         ),
+      backgroundColor: Colors.black,
+      body: Container(
+        child: Image.network(
+          photourl,
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
+        ),
       ),
     );
   }

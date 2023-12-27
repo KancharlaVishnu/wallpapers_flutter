@@ -18,8 +18,8 @@ class _PhotosScreenState extends State<PhotosScreen> {
   int albumId = Get.arguments as int;
 
   Future<List<PhotoModel>> fetchPhotos() async {
-    final response = await http
-        .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/$albumId/photos'));
+    final response = await http.get(Uri.parse(
+        'https://jsonplaceholder.typicode.com/albums/$albumId/photos'));
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
       List<PhotoModel> photos =
@@ -61,10 +61,8 @@ class _PhotosScreenState extends State<PhotosScreen> {
 
   Widget photoItem(PhotoModel model) {
     return GestureDetector(
-      onTap: (){
-        Get.toNamed(
-          RouteManager.individualphotoscreen,arguments: model.url
-        );
+      onTap: () {
+        Get.toNamed(RouteManager.individualphotoscreen, arguments: model.url);
       },
       child: Container(
         padding: const EdgeInsets.all(8),
