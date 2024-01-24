@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:wallpapers_flutter/route_manager.dart';
-
 import 'album_model.dart';
 
 class AlbumsScreen extends StatefulWidget {
@@ -55,17 +54,29 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
             onTap: () {
               Get.toNamed(RouteManager.photosscreen, arguments: album.id);
             },
-            child: ListTile(
-              title: Text(
-                album.id.toString(),
-                style: TextStyle(color: Colors.white60),
-              ),
-              subtitle: Text(
-                album.title,
-                style: TextStyle(color: Colors.white),
-              ),
-              // Add more details or customization as needed
-            ),
+            child: Container(
+              margin: EdgeInsets.all(1),
+                decoration:
+                    BoxDecoration
+                      (color:Colors.black26,
+                        border: Border.all(color: Colors.blueGrey),
+                    borderRadius: BorderRadius.circular(16)
+                    ),
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text(
+                        album.id.toString(),
+                        style: TextStyle(color: Colors.white54),
+                      ),
+                      subtitle: Text(
+                        album.title,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      // Add more details or customization as needed
+                    ),
+                  ],
+                )),
           );
         },
       ),
